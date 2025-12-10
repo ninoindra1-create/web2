@@ -1,0 +1,226 @@
+<!-- Updated version with red & black theme and name changed to Koin Advertising -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Landing Page Advertising — Koin Advertising</title>
+  <meta name="description" content="Halaman landing sederhana untuk kampanye advertising. Call to action, fitur, testimoni, dan formulir kontak." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#ff0000;
+      --accent-2:#b30000;
+      --bg:#000000;
+      --card:#0d0d0d;
+      --muted:#b3b3b3;
+      --glass: rgba(255,255,255,0.05);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:linear-gradient(180deg,#000000 0%, #1a0000 60%); color:#ffffff;}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+    .nav{display:flex;gap:14px;align-items:center}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:28px 0}
+    .hero h1{font-size:36px;margin:0 0 10px;line-height:1.05}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px}
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.12);padding:10px 14px;border-radius:10px;color:var(--muted)}
+
+    .ad-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.04)}
+    .mock{height:260px;border-radius:12px;background:linear-gradient(135deg,#330000,#1a0000);display:flex;align-items:center;justify-content:center;color:#ff9999;font-weight:700}
+
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0}
+    .feature{background:var(--glass);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.06)}
+    .feature h4{margin:0 0 8px}
+    .metrics{display:flex;gap:16px;margin-top:16px}
+    .metric{background:rgba(255,255,255,0.04);padding:12px;border-radius:12px;flex:1;text-align:center}
+
+    .testimonials{margin:28px 0}
+    .test-list{display:flex;gap:10px;overflow-x:auto;padding-bottom:10px}
+    .test{min-width:240px;background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.05)}
+
+    footer{border-top:1px solid rgba(255,255,255,0.05);padding:24px 0;margin-top:32px;color:var(--muted)}
+
+    @media(max-width:980px){ .hero{grid-template-columns:1fr;} .features{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:640px){ .features{grid-template-columns:1fr} .nav{display:none} .logo{width:40px;height:40px} .hero h1{font-size:28px} .mock{height:200px} }
+
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));font-weight:600}
+    .pulse{animation:pulse 3s infinite}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.02)}100%{transform:scale(1)}}
+
+    form{display:grid;gap:10px}
+    input,textarea,button{font-family:inherit}
+    input,textarea{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:inherit}
+    input::placeholder{color:var(--muted)}
+    .row{display:flex;gap:8px}
+    .row > *{flex:1}
+
+  </style>
+</head>
+<body>
+  <div class="countainer">
+    <header>
+      <div class="brand">
+        <img src="Koinadv.png" />
+        <div>
+          <div style="font-weight 300">Koin Advertising</div>
+          <div style="font-size:23px;color:var(--muted)">Advertising & Creative</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="secondary" href="#features">Fitur</a>
+        <a class="secondary" href="#testimoni">Testimoni</a>
+        <a class="btn" href="#kontak">Kontak</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="badge">Koin Advertising</div>
+        <h1>Mengerjakan berbagai kebutuhan<br><span style="color:var(--accent)">umum</span></h1>
+        <p>Banner,cutting sticker,Neon box,Huruf Timbul,Stempel, DLL.</p>
+        <div class="cta-row">
+          <a class="btn" href="#kontak">Dapatkan Penawaran</a>
+          <a class="secondary" href="#testimoni">Lihat Hasil</a>
+        </div>
+
+        <div class="metrics">
+          <div class="metric">
+            <div style="font-size:20px;font-weight:700">100%</div>
+            <div style="font-size:12px;color:var(--muted)">Free revisi sepuasnya!!!</div>
+          </div>
+          <div class="metric">
+            <div style="font-size:20px;font-weight:700">Dijamin</div>
+            <div style="font-size:12px;color:var(--muted)">Harga ramah dikantong dan barang berkualitas</div>
+          </div>
+          <div class="metric">
+            <div style="font-size:20px;font-weight:700">24/7</div>
+            <div style="font-size:12px;color:var(--muted)">Fast Respon</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="ad-card">
+        <div class="mock" id="carousel">GAMBAR IKLAN (Carousel)</div>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="secondary" id="prev">⟨</button>
+          <button class="secondary" id="next">⟩</button>
+        </div>
+      </aside>
+    </section>
+
+    <section id="features">
+      <h3>Mengerjakan</h3>
+      <div class="features">
+        <div class="feature">
+          <h4>Cetak Banner</h4>
+          <p style="color:var(--muted);margin:0">Cetak banner sehari jadi dengan menggunakan mesin berteknologi canggih.</p>
+        </div>
+        <div class="feature">
+          <h4>Desain Kreatif</h4>
+          <p style="color:var(--muted);margin:0">Menerima jasa desain seperti desain banner,logo,DLL.</p>
+        </div>
+        <div class="feature">
+          <h4>Neon Box</h4>
+          <p style="color:var(--muted);margin:0">media reklame dengan lampu didalamnya sehingga tampilan tulisan atau gambar dapat menyala terang di malam hari.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimoni" class="testimonials">
+      <h3>Testimoni</h3>
+      <div class="test-list">
+        <div class="test">
+          <div style="font-weight:700">Rinaa</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">"Ramah,Pelayanannya bagus,kerjanya gesit"</div>
+        </div>
+        <div class="test">
+          <div style="font-weight:700">Indraa</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">"Banyak desain menarik dan sangat bagus,barangnya mantap"</div>
+        </div>
+        <div class="test">
+          <div style="font-weight:700">Nouval</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">"Fast respon,orangnya ramah dan selalu memberikan pelayanan terbaik"</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" style="margin-top:18px">
+      <h3>Kontak / Dapatkan Penawaran</h3>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start">
+        <div>
+          <p style="color:var(--muted)">Isi formulir ini dan tim kami akan menghubungi Anda untuk konsultasi gratis dan estimasi biaya.</p>
+
+          <form id="leadForm">
+            <div class="row">
+              <input type="text" id="name" placeholder="Nama lengkap" required />
+              <input type="text" id="company" placeholder="Perusahaan / Toko" />
+            </div>
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="tel" id="phone" placeholder="No. WA / Telepon" />
+            <textarea id="message" rows="4" placeholder="Pesan singkat atau tujuan campaign"></textarea>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button class="btn" type="submit">Kirim Permintaan</button>
+              <div style="color:var(--muted);font-size:13px">Atau hubungi: <strong>+62 8585 2222 176</strong></div>
+            </div>
+            <div id="formResult" style="margin-top:8px;font-size:13px;color:var(--muted)"></div>
+          </form>
+        </div>
+
+        <aside class="ad-card">
+          <h4>Kenapa memilih kami?</h4>
+          <ul style="color:var(--muted);padding-left:18px;margin:8px 0">
+            <li>Bekerja secara profesional</li>
+            <li>Desain gratis revisi sampai client puas</li>
+            <li>Kepuasan client Dijamin</li>
+          </ul>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Paket mulai dari <strong>Rp 16.000</strong> — dapat disesuaikan sesuai kebutuhan.</div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© 2025 Koin Advertising — Semua hak cipta dilindungi.</div>
+        <div style="color:var(--muted);font-size:13px">Alamat: Ngawi,Dungus,Karangasri Rt 06 Rw 04 • Email: ninoindra12@gmail.com</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const slides = [
+      {text:'Produk berkualitas tinggi menggunakan bahan yang tebal dan berkualitas', bg: 'linear-gradient(135deg,#cc0000,#990000)'},
+      {text:'Memberikan pelayanan sepenuh hati untuk para customer', bg: 'linear-gradient(135deg,#660000,#330000)'},
+      {text:'Bergaransi jika barang rusak/cacat dalam kurun waktu 1 bulan!', bg: 'linear-gradient(135deg,#ff1a1a,#b30000)'}
+    ];
+    let idx = 0;
+    const carousel = document.getElementById('carousel');
+    function render(){
+      const s = slides[idx];
+      carousel.style.background = s.bg;
+      carousel.textContent = s.text;
+    }
+    document.getElementById('next').addEventListener('click', ()=>{ idx = (idx+1)%slides.length; render(); });
+    document.getElementById('prev').addEventListener('click', ()=>{ idx = (idx-1+slides.length)%slides.length; render(); });
+    render();
+
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const result = document.getElementById('formResult');
+      if(!name || !email){ result.textContent = 'Mohon isi nama dan email.'; return; }
+      result.style.color = 'lightgreen';
+      result.textContent = 'Terima kasih — permintaan Anda telah dikirim.';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
